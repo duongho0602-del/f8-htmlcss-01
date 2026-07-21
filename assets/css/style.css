@@ -6,6 +6,10 @@
     --primary-color: #0f1b4c;
 }
 
+html, body {
+    scroll-behavior: smooth;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -44,16 +48,26 @@ a {
 }
 
 /* ======== Header ======== */
-.header {
+.fixed-header {
+    background-color: #e6f0ff;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 1;
+}
+
+.hero-wrap {
     position: relative;
+    display: flex;
+    flex-direction: column;
     background: #e6f0ff;
-    height: 100vh;
+    height: calc(100vh - 60px);
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    padding: 12px 0;
 }
 
 .navbar ul {
@@ -407,20 +421,6 @@ a {
     letter-spacing: 0%;
     color: rgba(90, 100, 115, 1);
     padding-top: 20px;
-}
-
-.redu .pic {
-    position: relative;
-}
-
-.redu .anh {
-    position: absolute;
-    display: block;
-    top: 0px;
-    left: 0px;
-    width: 239px;
-    height: 252px;
-    background-color: orange;
 }
 
 .redu .so {
